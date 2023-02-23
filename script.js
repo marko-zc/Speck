@@ -1,18 +1,24 @@
 const techInput = document.getElementById("techInput");
 const techList = document.getElementById("techList");
+const techForm = document.getElementById("techForm");
+const removeAllBtn = document.getElementById("removeAllBtn");
 
-addTech = (e) => {
+techForm.addEventListener("submit", addTech);
+removeAllBtn.addEventListener("click", clearTechs);
+
+function addTech(e) {
     e.preventDefault();
     const listElement = document.createElement("li");
     listElement.innerText = techInput.value;
     listElement.classList.add("techItem");
     techList.appendChild(listElement);
-    techInput.value = "";
+    techInput.value = null;
 }
 
-clearTechs = () => {
-    const listElements = document.getElementsByClassName("techItem");
-    while (listElements.length > 0) {
-        listElements[0].remove();
-    }
+function clearTechs() {
+    const listElements = Array.from(document.getElementsByClassName("techItem"));
+    
+    listElements.forEach(el => {
+        el.remove();
+    })
 }

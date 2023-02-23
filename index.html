@@ -8,17 +8,20 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>My technologies</h1>
+    <div id="container">
+        <h1>My technologies</h1>
     
-    <div id="inputDiv">
-        <form onsubmit="addTech(event)">
-            <input type="text" id="techInput" placeholder="Enter new technology..." required>
-            <button id="addTechBtn" type="submit">Add</button>
-        </form>
-        <button id="removeAllBtn" onclick="clearTechs()">Remove all items</button>
+        <div class="inputContainer">
+            <form id="techForm">
+                <input type="text" id="techInput" placeholder="Enter new technology..." required>
+                <button class="btn1" type="submit">Add</button>
+            </form>
+            <button id="removeAllBtn">Remove all items</button>
+        </div>
+    
+        <ul id="techList"></ul>
     </div>
 
-    <ul id="techList"></ul>
 
     <script src="script.js"></script>
 </body>
