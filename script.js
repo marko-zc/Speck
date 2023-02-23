@@ -3,11 +3,11 @@ const techList = document.getElementById("techList");
 
 addTech = (e) => {
     e.preventDefault();
-        const listElement = document.createElement("li");
-        listElement.innerText = techInput.value;
-        listElement.classList.add("techItem");
-        techList.appendChild(listElement);
-        techInput.value = "";
+    const listElement = document.createElement("li");
+    listElement.innerText = techInput.value;
+    listElement.classList.add("techItem");
+    techList.appendChild(listElement);
+    techInput.value = "";
 }
 
 clearTechs = () => {
