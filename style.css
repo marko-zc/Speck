@@ -42,12 +42,12 @@ button {
 
 #techInput:focus {
     color: #383838;
-    border: 1px solid #dd9a9a;
+    border: 2px solid #dd9a9a;
     outline: none;
     font-size: 20px;
 }
 
-.btn1 {
+.submitBtn {
     font-size: 20px;
     height: 44px;
     width: 100px;
@@ -60,7 +60,7 @@ button {
     margin-left: 25px;
 }
 
-.btn1:hover {
+.submitBtn:hover {
     color: white;
     font-weight: bolder;
     background-color:#b83132;
@@ -89,6 +89,7 @@ button {
 }
 
 .techItem {
+    padding: 15px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -109,5 +110,8 @@ button {
         grid-template-columns: auto;
         max-width: 480px;
         margin: 0 auto;
+    }
+    .techItem {
+        width: 100%;
     }
 }
