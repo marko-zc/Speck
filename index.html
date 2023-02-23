@@ -10,11 +10,13 @@
 <body>
     <h1>My technologies</h1>
     
-    <form onsubmit="addTech(event)">
-        <input type="text" id="techInput" placeholder="Enter new technology...">
-        <button id="addTechBtn" type="submit">Add</button>
-    </form>
-    <button id="removeAllBtn" onclick="clearTechs()">Remove all items</button>>
+    <div id="inputDiv">
+        <form onsubmit="addTech(event)">
+            <input type="text" id="techInput" placeholder="Enter new technology..." required>
+            <button id="addTechBtn" type="submit">Add</button>
+        </form>
+        <button id="removeAllBtn" onclick="clearTechs()">Remove all items</button>
+    </div>
 
     <ul id="techList"></ul>
 
