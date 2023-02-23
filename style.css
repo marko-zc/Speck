@@ -1,15 +1,23 @@
 body {
-    margin: auto;
-    width: 40%;
+    margin: 0;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-h1 {
-    font-size: 30px;
-    font-weight: bold;
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 50px;
 }
 
-#inputDiv {
+h1 {
+    color: #383838;
+    margin: 0;
+    font-size: 42px;
+    font-weight: bolder;
+}
+
+.inputContainer {
+    margin: 60px 0;
     display: flex;
     justify-content: space-between;
 }
@@ -19,27 +27,50 @@ form {
 }
 
 button {
-    display: inline-block
+    display: inline-block;
 }
 
 #techInput {
-    border: 1px solid gray;
+    color: #c5c4c5;
+    border: 2px solid #c5c4c5;
     border-radius: 5px;
-    height: 25px;
+    height: 32px;
     width: 250px;
-    font-size: 14px;
+    font-size: 20px;
+    padding: 5px 12px;
 }
 
 #techInput:focus {
+    color: #383838;
     border: 1px solid #dd9a9a;
     outline: none;
-    font-size: 14px;
+    font-size: 20px;
+}
+
+.btn1 {
+    font-size: 20px;
+    height: 44px;
+    width: 100px;
+    border: 2px solid #db908e;
+    border-radius: 5px;
+    background-color:#fcede8;
+    color: #cc5e5e;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 25px;
+}
+
+.btn1:hover {
+    color: white;
+    font-weight: bolder;
+    background-color:#b83132;
+    border: 2px solid #b83132;
 }
 
 #removeAllBtn {
     border: none;
     background-color: none;
-    font-size: 14px;
+    font-size: 20px;
     background: none;
     color: #d07272;
     text-decoration: underline;
@@ -47,41 +78,28 @@ button {
 }
 
 
-#addTechBtn {
-    font-size: 14px;
-    height: 30px;
-    width: 50px;
-    border: 1px solid #db908e;
-    border-radius: 5px;
-    background-color:#fcede8;
-    color: #cc5e5e;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-#addTechBtn:hover {
-    color: white;
-    background-color:#b83132;
-}
-
 #techList {
-    margin-top: 5%;
     list-style: none;
     display: grid;
-    grid-template-columns: auto 45%;
+    grid-template-columns: auto 1fr;
     grid-template-rows: auto;
     row-gap: 40px;
+    column-gap: 40px;
     padding-left: 0;
 }
 
 .techItem {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
     height: 60px;
     line-height: 60px;
-    width: 350px;
+    width: 580px;
     border-radius: 10px;
-    box-shadow: 1px 3px 3px 1px grey;
-    font-size: 20px;
-    font-weight: bold;
+    box-shadow: 3px 2px 3px 3px #c5c4c5;
+    box-shadow: 0 2px 3px 3px #c5c4c5;
+    font-size: 24px;
+    font-weight: bolder;
     text-align: center;
     text-transform: uppercase;
 }
@@ -89,5 +107,7 @@ button {
 @media only screen and (max-width: 1200px) {
     #techList {
         grid-template-columns: auto;
+        max-width: 480px;
+        margin: 0 auto;
     }
 }
